@@ -1,0 +1,17 @@
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.navbarText {
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  color: white;
+}
+
+.navbarImg {
+  height: 30px;
+  border-radius: 1rem;
+}

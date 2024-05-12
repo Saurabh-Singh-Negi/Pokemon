@@ -3,16 +3,27 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const PokemonChart = ({ pokemonData }) => {
+  const typeCounts = pokemonData.reduce((counts, pokemon) => {
+    counts[pokemon.type] = (counts[pokemon.type] || 0) + 1;
+    return counts;
+  }, {});
+
+  const chartData = Object.keys(typeCounts).map((type) => ({
+    name: type,
+    y: typeCounts[type],
+  }));
+
   const options = {
     chart: {
       type: "pie",
     },
     title: {
-      text: "My chart",
+      text: "Pokemon Types",
     },
     series: [
       {
-        data: [1, 2, 1, 4, 3, 6],
+        name: "Count",
+        data: chartData,
       },
     ],
   };

@@ -1,0 +1,16 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  margin-top: 5rem;
+}
+
+.warning1 {
+  font-size: 10rem;
+}
+
+.warning2 {
+  font-size: 3rem;
+}
